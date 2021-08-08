@@ -4,7 +4,6 @@ class PostCommentsController < ApplicationController
     comment = PostComment.new(post_comment_params)
     comment.user_id = current_user.id
     comment.post_image_id = post_image.id
-    binding.pry
     comment.save
     redirect_to post_image_path(post_image)
   end
